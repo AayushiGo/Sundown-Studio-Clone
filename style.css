@@ -1,0 +1,516 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Neuehaasdisplay',sans-serif;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+
+#page-1{
+    min-height: 100vh;
+    width: 100%;
+    background-color:#efeae3;
+    position: relative;
+    padding: 0 2vw;
+}
+
+nav{
+    width: 100%;
+    padding: 2.3vw 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-2{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+.nav-2 h4{
+    padding: 10px 20px;
+    border: 1px solid rgba(70, 70, 70, 0.377);
+    border-radius: 50px;
+    font-weight: 500;
+    color: rgb(8, 8, 8);
+    font-size: 18px;
+    position: relative;
+    transition: all ease 0.25s;
+    overflow: hidden;
+}
+
+.nav-2 h4::after{
+    content: "";
+    position: absolute;
+    height: 50px;
+    width:50px ;
+    background-color: black;
+    left: 25%;
+    bottom: -121%;
+    border-radius: 50%;
+    transition: all ease 0.25s;
+    
+}
+
+.nav-2 h4:hover::after{
+    left: 0;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    border-radius: 50px;
+
+}
+
+.nav-2 h4 a{
+    text-decoration: none;
+    color: rgb(8, 8, 8) ;
+    z-index: 9;
+    position: relative;
+}
+
+.nav-2 h4:hover a{
+    color: #fff;
+}
+
+.center{
+    height: 87vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    padding: 2.3vw 2vw;
+    margin-top: 0vw;
+    border-bottom: solid 1px #44444460;
+}
+
+.left h3{
+    width: 29vw;
+    font-size: 1.9vw;
+    letter-spacing: -1.2px;
+    word-spacing: -1.8px;
+}
+
+.right{
+    margin-left: 18vw;
+    text-align: end;
+}
+
+.right h1{
+    line-height: 9.4vw;
+    font-size: 10em;
+    letter-spacing: -10px;
+}
+
+#page-1 video{
+    position: inherit;
+    width: 100%;
+    border-radius: 30px;
+    margin-top: 4vw;
+    z-index: 9;
+}
+
+.floating1{
+    position: absolute;
+    width: 40vw;
+    height: 36vw;
+    border-radius: 50%;
+    filter: blur(20px);
+    background-color: #fe330a;
+    right: 18vw;
+    top: 100vh;
+    animation-name: anni1;
+    animation-duration: 2s ;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    z-index: 1;
+}
+
+.floating2{
+    position: absolute;
+    width: 42vw;
+    height: 40vw;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    background-color:#fe330a ;
+    filter: blur(20px);
+    right: 0%;
+    top: 90vh;
+    animation-name: anni2;
+    animation-duration: 2s ;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    overflow: hidden;
+    z-index: 1;
+}
+.floating3{
+    position: absolute;
+    width: 40vw;
+    height: 80vw;
+    border-radius: 50%;
+    background-color:#fe330a;
+    filter: blur(20px);
+    right: 10vw;
+    top: 800vh;
+    animation-name: anni3;
+    animation-duration: 2s ;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    z-index: 1;
+}
+
+.floating4{
+    position: absolute;
+    background-color: #fe330a;
+    filter: blur(20px);
+    width: 30vw;
+    height: 30vw;
+    top: 56vw;
+    right: 0;
+}
+
+@keyframes anni1 {
+
+    from{
+        transform: translate(-4%,4%) ;
+    }
+
+    to{
+        transform: translate(4%,-4% ) ;
+    }
+    
+}
+
+@keyframes anni2 {
+
+    from{
+        transform: translate(3%, -3%);
+    }
+
+    to{
+        transform: translate(-3% ,3%);
+    }
+    
+}
+
+@keyframes anni3 {
+
+    from{
+        transform: translate(7% , -2% );
+    }
+
+    to{
+        transform: translate(-7% , 2%);
+    }
+    
+}
+
+
+/* Page-2 */
+#page-2{
+    padding: 8vw 0;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #efeae3;
+}
+
+.moving{
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.moving::-webkit-scrollbar{
+    display: none;
+}
+.content{
+    white-space: nowrap;
+    display: inline-block;
+    animation: move 13s linear infinite ;
+}
+
+.moving h1{
+    font-size: 10vw;
+    letter-spacing: -5px;
+    display: inline-block;
+}
+
+.circle{
+    margin: 1.5vw 2vw;
+    width: 50px;
+    height: 50px;
+    background-color: #fe330a;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+@keyframes move {
+
+    from{
+        transform: translateX(0);
+    }
+
+    to{
+        transform: translateX(-100%);
+    }
+    
+}
+
+.cent{
+    padding: 6vw;
+    min-height: 120vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.lefty h1{
+    font-family: 'Neuehaasdisplay bold',sans-serif;
+    font-weight: 700;
+    font-size: 4.5vw;
+    letter-spacing: -5px;
+    line-height: 5vw;
+    z-index: 9;
+    position: relative;
+}
+.righty{
+    max-width: 40vw;
+    position: absolute;
+}
+.righty img{
+    position: relative;
+    right: -65vw;
+    top: 5vw;
+    width: 20vw;
+    border-radius: 10px;
+}
+
+.righty h6{
+    position: relative;
+    right: -65vw;
+    top: 7vw;
+    width: 20vw;
+    font-weight: 100;
+    line-height: 1.5vw;
+    font-size: 1vw;
+    word-spacing: 0.2vw;
+    text-align: left;
+    color: #000000b6;
+    
+}
+
+.float1{
+    position: absolute;
+    width: 35vw;
+    height: 35vw;
+    top: 27vw;
+    left: 20vw;
+    border-radius: 50%;
+    background-color:#fe330a ;
+    filter: blur(40px);
+    animation-name: ann1;
+    animation-duration: 2s ;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: linear;
+
+    overflow: hidden;
+    z-index: 1;
+}
+   
+.float2{
+    position: absolute;
+    width: 35vw;
+    height: 35vw;
+    top: 25vw;
+    left: 20vw;
+    border-radius: 50%;
+    background-color: #ff9831 ;
+    filter: blur(20px);
+    animation-name: ann2;
+    animation-duration: 2s ;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: linear;
+    overflow: hidden;
+    
+}
+
+@keyframes ann1 {
+
+    from{
+        transform: translate(-4%,4%)
+        skew(0) ;
+    }
+
+    to{
+        transform: translate(4%,-4% ) skew(-10deg);
+    }
+    
+}
+
+@keyframes ann2 {
+
+    from{
+        transform: translate(3%, -3%) skew(0);
+    }
+
+    to{
+        transform: translate(-3% ,3%) skew(-10deg);
+    }
+    
+}
+   
+.featured{
+    position: relative;
+    left: -67vw;
+    top: 35vw;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 0.5vw;
+    padding: 10vw;
+}
+
+.featured img{
+    width: 7px;
+    
+}
+
+.featured h5{
+    font-weight: 100;
+    color:#000000b6 ;
+}
+
+
+/* Page-3 */
+
+#page-3{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #efeae3;
+}
+
+.elem{
+    height: 120px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    top: 5vw;
+    border-bottom: 0.6px solid  rgba(70, 70, 70, 0.377) ;
+    padding: 2vw 2vw;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.elem h2{
+    font-size: 3.25vw;
+    font-family: 'Neuehaasdisplay mediu',sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -3px;
+    position: relative;
+    z-index: 99;
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    background-color: #ff9831;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all 0.3s ease ;
+    
+}
+
+.elem:hover .overlay{
+    top: 0;
+}
+
+.fixed-img{
+    height: 30vw;
+    width: 25vw;
+    border-radius: 10px;
+    position: fixed;
+    z-index: 999;
+    left: 50%;
+    top: 17%;
+    display: none;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+
+/* Page-4*/
+
+#page-4{
+    padding: 8vw 2vw;
+    min-height: 100vh;
+    background-color: #efeae3;
+    width: 100%;
+
+}
+
+.nav-3{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    
+}
+
+.nav-3 h4{
+    padding: 10px 38px;
+
+    border: 1px solid rgba(70, 70, 70, 0.377);
+    border-radius: 50px;
+    font-weight: 500;
+    color: rgb(8, 8, 8);
+    font-size: 15px;
+    position: relative;
+    transition: all ease 0.25s;
+    overflow: hidden;
+}
+
+.nav-3 h4::after{
+    content: "";
+    position: absolute;
+    height: 50px;
+    width:50px ;
+    background-color: black;
+    left: 35%;
+    bottom: -138%;
+    border-radius: 50%;
+    transition: all ease 0.25s;
+    
+}
+
+.nav-3 h4:hover::after{
+    left: 0;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    border-radius: 50px;
+
+}
+
+.nav-3 h4 a{
+    text-decoration: none;
+    color: rgb(8, 8, 8) ;
+    z-index: 9;
+    position: relative;
+    
+    
+}
+
+.nav-3 h4:hover a{
+    color: #fff;
+}
+
+
